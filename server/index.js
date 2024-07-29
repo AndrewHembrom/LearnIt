@@ -6,6 +6,9 @@ dotenv.config();
 
 const app = express();
 
+//Using Middlewares
+app.use(express.json());
+
 const port = process.env.PORT;
 
 app.get('/', (req, res) => { 
