@@ -6,6 +6,7 @@ import Header from './components/Header/Header.jsx';
 import Login from './pages/auth/Login.jsx';
 import Register from './pages/auth/Register.jsx';
 import Verify from './pages/auth/Verify.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='/register' element={<Register />} />
           <Route path='/verify' element={<Verify/>}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   )

@@ -14,7 +14,7 @@ const Register = () => {
                   <label htmlFor="email">Email</label>
                   <input type="email" required />
                   
-                  <label htmlFor="password">Email</label>
+                  <label htmlFor="password">Password</label>
                   <input type="password" required />
                   
                   <button className='common-btn'>Register</button>

@@ -11,7 +11,7 @@ const Verify = () => {
                   <label htmlFor="otp">Otp</label>
                   <input type="number" required />
                   
-                  <button className='common-btn'></button>
+                  <button className='common-btn'>Verify</button>
               </form>
               <p>
                   Go to <Link to='/login'>Login</Link> page
