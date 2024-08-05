@@ -7,6 +7,7 @@ import Login from './pages/auth/Login.jsx';
 import Register from './pages/auth/Register.jsx';
 import Verify from './pages/auth/Verify.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import About from './pages/about/About.jsx';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Header/>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/verify' element={<Verify/>}/>
