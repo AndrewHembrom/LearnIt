@@ -1,9 +1,12 @@
 footer {
+    display: flex;
+    margin-bottom: 0;
     background-color: #8a4baf;
     color: white;
     padding: 20px 0;
     text-align: center;
     bottom: 0;
+    height: max-content;
 
     .footer-content {
         max-width: 1200px;

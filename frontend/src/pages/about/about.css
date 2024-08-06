@@ -1,3 +1,10 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 84.2vh;
+}
+
 .about {
     padding: 80px 0;
     text-align: center;

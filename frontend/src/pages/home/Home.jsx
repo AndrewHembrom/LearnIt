@@ -7,7 +7,7 @@ const Home = () => {
     const navigate = useNavigate()
 
   return (
-    <div>
+    <div className='home-cont'>
         <div className="home">
             <div className="home-content">
                   <h1>Welcome to Learn-It</h1>
