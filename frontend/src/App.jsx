@@ -9,19 +9,21 @@ import Verify from './pages/auth/Verify.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import About from './pages/about/About.jsx';
 import Account from './pages/account/Account.jsx';
+import { UserData } from './context/UserContext.jsx';
 
 const App = () => {
+  const { isAuth, user} = UserData();
   return (
     <div>
       <BrowserRouter>
-        <Header/>
+        <Header isAuth={ isAuth } />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/account' element={<Account />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/verify' element={<Verify/>}/>
+          <Route path='/account' element={isAuth ? <Account user={ user } /> : <Login/> } />
+          <Route path='/login' element={ isAuth ? <Home /> : <Login/> } />
+          <Route path='/register' element={ isAuth ? <Home /> : <Register />} />
+          <Route path='/verify' element={ isAuth ? <Home /> : <Verify/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
