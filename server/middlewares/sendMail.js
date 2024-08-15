@@ -1,5 +1,5 @@
 import { createTransport } from 'nodemailer';
-import { send } from 'vite';
+// import { send } from 'vite';
 
 const sendMail = async (email, subject, data) => {
     const transport = createTransport({
