@@ -10,12 +10,13 @@ import Footer from './components/Footer/Footer.jsx';
 import About from './pages/about/About.jsx';
 import Account from './pages/account/Account.jsx';
 import { UserData } from './context/UserContext.jsx';
+import Loading from './components/Loading/Loading.jsx'
 
 const App = () => {
-  const { isAuth, user} = UserData();
+  const { isAuth, user, loading} = UserData();
   return (
     <div>
-      <BrowserRouter>
+      {loading ? <Loading/> : <BrowserRouter>
         <Header isAuth={ isAuth } />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -26,7 +27,7 @@ const App = () => {
           <Route path='/verify' element={ isAuth ? <Home /> : <Verify/>}/>
         </Routes>
         <Footer/>
-      </BrowserRouter>
+      </BrowserRouter>}
     </div>
   )
 }
