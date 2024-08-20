@@ -12,6 +12,7 @@ import Account from './pages/account/Account.jsx';
 import { UserData } from './context/UserContext.jsx';
 import Loading from './components/Loading/Loading.jsx'
 import Courses from './pages/courses/Courses.jsx';
+import CourseDescription from './pages/coursedescription/CourseDescription.jsx';
 
 const App = () => {
   const { isAuth, user, loading} = UserData();
@@ -26,7 +27,8 @@ const App = () => {
           <Route path='/account' element={isAuth ? <Account user={ user } /> : <Login/> } />
           <Route path='/login' element={ isAuth ? <Home /> : <Login/> } />
           <Route path='/register' element={ isAuth ? <Home /> : <Register />} />
-          <Route path='/verify' element={ isAuth ? <Home /> : <Verify/>}/>
+          <Route path='/verify' element={isAuth ? <Home /> : <Verify />} />
+          <Route path='/course/:id' element={ isAuth ? <CourseDescription user={user}/> : <Login/>} />
         </Routes>
         <Footer/>
       </BrowserRouter>}
