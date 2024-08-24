@@ -85,7 +85,7 @@ export const UserContextProvider = ({ children }) => {
     }, [])
 
     return (
-        <UserContext.Provider value={{ user,setUser, isAuth, setIsAuth, btnLoading, setBtnLoading, loginUser, loading, setLoading, registerUser, verifyOtp}}>
+        <UserContext.Provider value={{ user,setUser, isAuth, setIsAuth, btnLoading, setBtnLoading, loginUser, loading, setLoading, registerUser, verifyOtp, fetchUser}}>
             {children}
             <Toaster/>
         </UserContext.Provider>
